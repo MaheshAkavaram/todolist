@@ -9,7 +9,7 @@ urlpatterns = [
     path('sortdata', views.sortdata, name='sortdata'),
     path('searchdata', views.searchdata, name='searchdata'),
     path('edit/<int:id>', views.edit, name='edit'),
-    path('update/<int:id>', views.update, name='update'),
-    path('updateTask/<int:id', views.updateTask, name='updateTask')
+    path('update/<int:id>', views.update, name='update')
+    
 
 ]

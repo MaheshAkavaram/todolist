@@ -72,17 +72,4 @@ def update(request,id):
     return render(request,'list.html',context=mydictionary)
 
 
-def updateTask(request, id):
-	queryset = task.objects.get(id=id)
-	form = UpdateForm(instance=queryset)
-	if request.method == 'POST':
-		form = UpdateForm(request.POST, instance=queryset)
-		if form.is_valid():
-			form.save()
-			return redirect('/')
 
-	context = {
-		'form':form
-		}
-
-	return render(request, 'list.html', context)

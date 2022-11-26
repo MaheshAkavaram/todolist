@@ -9,5 +9,3 @@ class Todo(models.Model):
     created_at = models.DateTimeField(auto_now_add=True,null=True)
 
 
-class UpdateForm(forms.ModelForm):
-	title= forms.CharField(widget= forms.TextInput(attrs={'placeholder':'Task title...'}))
